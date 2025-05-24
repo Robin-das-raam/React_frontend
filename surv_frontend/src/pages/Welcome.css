@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+
+.backgroundImage { 
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.welcomeTo {
+    margin: 0;
+    margin-bottom: 10px;  /* Adds space below "Welcome to" */
+    font-size: 20px;
+    font-weight: 500;
+}
+.SurveillanceSystem {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 600;
+}
+.welcomeToContainer {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+}
+.experienceRealTimeAnd {
+    align-self: stretch;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    line-height: 150%;
+    font-family: 'DM Sans';
+}
+.welcomeToSurveillanceSParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.tryNow {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+.TryNowIcon {
+    width: 32px;
+    position: relative;
+    max-height: 100%;
+    transition: margin-left 0.3s ease;
+}
+.tryNowParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    transition: gap 0.3s ease;
+}
+.tryNowParent:hover {
+    gap: 15px;
+  }
+.LogoParent {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+
+
+.welcomePageInner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: -20px 20px 100px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 0 0 0 100px;
+    background-color: #4B8BA2		;
+    width: 50vw; /* Responsive width instead of fixed */
+    height: 100vh; /* Take full screen height */
+    min-width: 300px;
+    padding: 2rem;
+    box-sizing: border-box;
+    /* Center content vertically and horizontally */
+    display: flex;
+    align-items: center;      /* Vertically center */
+    justify-content: flex-start; /* Align to the left horizontally */
+}
+
+
+.welcomePage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    text-align: left;
+    font-size: 32px;
+    color: #fff;
+    font-family: Inter, sans-serif;
+    display: flex;
+}
