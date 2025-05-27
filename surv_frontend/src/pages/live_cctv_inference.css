@@ -1,0 +1,177 @@
+.liveCCTVWrapper {
+    width: 100%;
+    position: relative;
+    background-color: #317389;
+    height: 1080px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 120px;
+    box-sizing: border-box;
+    gap: 64px;
+    text-align: left;
+    font-size: 48px;
+    color: #fff;
+    font-family: Inter;
+  }
+  
+  .goBackIcon {
+    width: 32px;
+    position: relative;
+    max-width: 100%;
+    /* max-height: 100%; */
+    object-fit: contain;
+    cursor: pointer;
+  }
+  
+  .headerSection {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+  }
+  
+  .connectYourCctv {
+    width: 100%;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: -0.02em;
+    line-height: 150%;
+    font-family: 'DM Sans';
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    }
+
+  .headerSection h1 {
+    width: 100%;
+    position: relative;
+    font-size: 48px;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-weight: 600;
+    font-family: Inter;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .modelSelection {
+    align-self: stretch;
+    position: relative;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    font-family: 'Inter Display';
+
+    margin-top: 2rem; /* Space below header */
+    padding: 1rem;
+    /* background-color: #f9f9f9; */
+    border-radius: 8px;
+
+
+  }
+  
+  .modelSelection h2 {
+    width: 100%;
+    position: relative;
+    font-size: 30px;
+    letter-spacing: -0.02em;
+    line-height: 110%;
+    display: inline-block;
+    font-family: 'Inter Display';
+    color: #fff;
+    text-align: left;
+  }
+  
+  .modelSelection label {
+    width: 368px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2px 0px;
+    box-sizing: border-box;
+    gap: 16px;
+  }
+  
+  .modelSelection input[type="radio"] {
+    width: 16px;
+    border-radius: 40px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    height: 28px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  .videoSection {
+    position: relative;
+    margin-bottom: 2rem;
+    max-width: 720px;
+  }
+  
+  .liveImage {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .infoOverlay {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .infoRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+  }
+  
+  .infoRow img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  .controlButtons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .startBtn,
+  .stopBtn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .startBtn {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .startBtn:hover {
+    background-color: #43a047;
+  }
+  
+  .stopBtn {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .stopBtn:hover {
+    background-color: #e53935;
+  }
+  

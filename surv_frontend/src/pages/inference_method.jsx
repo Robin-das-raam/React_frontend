@@ -10,6 +10,12 @@ const ChooseYourInferenceMethod = () => {
         // pass
     }, []);
 
+    const onCardClick = useCallback((method) => {
+        console.log(`Card clicked: ${method}`);
+        // Navigation logic will go here later, e.g.:
+        // navigate(`/inference/${method}`);
+    }, []);
+
     return (
         <div className = "chooseYourInferenceMethod">
             <h1 className="heading">Choose Your Inference Method</h1>
