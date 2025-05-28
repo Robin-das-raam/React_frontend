@@ -2,6 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import './upload_videos.css';
 import UploadIcon from '../assets/icon_img.png';
+import GoBackIcon from '../assets/go_backicon.svg';
 
 
 const DragAndDrop = ({ onDrop }) => {
@@ -38,7 +39,15 @@ const DragAndDrop = ({ onDrop }) => {
     const { getRootProps, getInputProps } = useDropzone({ onDrop: handleDrop});
 
     return (
+        
         <div className="drag-drop-wrapper">
+            <img
+                src={GoBackIcon}
+                alt="Go Back"
+                className="go-back-icon"
+                onClick={() => window.history.back()} // Or your go-back handler
+            />
+            {/* <img src={GoBackIcon} alt="Go Back" className="goBackIcon" onClick={onGoBackClick} /> */}
             <h1 className="upload-title">UPLOAD FILES</h1>
             <p className="upload-subtitle">Upload videos you want to share</p>
 
@@ -66,18 +75,10 @@ const DragAndDrop = ({ onDrop }) => {
                     ))}
                 </div>
             )}
+            
 
-            {/* <div className="uploaded-section">
-                <h3>Uploaded files</h3>
-                <div className="file-item">
-                    <span className="file-name">Sample_video.mp4</span>
-                    <div className="progress-bar">
-                        <div className="progress" style={{ width: '60%' }}></div>
-                    </div>
-                    <span className="progress-percent">60%</span>
-                </div>
-            </div> */}
         </div>
+        
     );
 };
 
