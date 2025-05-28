@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from './pages/live_cctv_inference.jsx';
+import Welcome from './pages/upload_videos.jsx';
 
 function App() {
   return (

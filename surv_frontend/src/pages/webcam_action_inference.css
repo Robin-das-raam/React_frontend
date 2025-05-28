@@ -1,0 +1,182 @@
+.liveCCTVWrapper {
+    width: 100%;
+    position: relative;
+    background-color: #317389;
+    height: 1080px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 120px;
+    box-sizing: border-box;
+    gap: 64px;
+    text-align: left;
+    font-size: 48px;
+    color: #fff;
+    font-family: Inter;
+  }
+  
+  /* Left Panel */
+  .leftPanel {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 70px; /* lowered a bit */
+  }
+  
+  .goBackIcon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 0px;     /* Align with infoOverlay left padding */
+    margin-top: 10px;      /* Align vertically with infoOverlay */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.goBackIcon:hover {
+transform: scale(1.1) rotate(-5deg);
+opacity: 0.8;
+}
+  
+  
+  .headerSection h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .connectYourCctv {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .modelSelection h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .modelSelection label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+  }
+  
+  /* Right Panel */
+  .rightPanel {
+    width: 950px;
+    height: 658.4px;
+    position: relative;
+    top: 67px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Video Section */
+  .videoSection {
+    position: relative;
+    width: 850px;
+    height: 500px;
+    top: 60px;
+  }
+  
+  .liveImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  
+   .infoOverlay {
+    position: absolute;
+    width:100%;
+    top: 10px;
+    margin-left: 0px; /* Align with goBackIcon */
+    margin-bottom: px; /* Gap between info and image */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /* border-radius: 8px; */
+    box-sizing: border-box;
+    max-width: 850px; /* Optional: limit max width */
+  }
+  
+
+  .infoRow {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .infoRow img {
+    width: 15px;
+    margin-right: 8px;
+  }
+  
+  /* Reposition control buttons */
+  .controlButtons {
+    width: 850px;
+    margin-top: 80px; /* Gap between image and buttons */
+    /* position: relative; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    text-align: center;
+    font-size: 19.2px;
+    color: #317389;
+    font-family: 'DM Sans', sans-serif;
+    margin-left: auto;  /* Center align */
+    margin-right: auto; /* Center align */
+  }
+  
+  .startBtn, .stopBtn {
+    /* top: 50px; */
+    padding: 10px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for Start Button */
+.startBtn:hover {
+  background-color: #45a049; /* Slightly darker green */
+  transform: scale(1.03);    /* Slight grow */
+}
+
+/* Hover effect for Stop Button */
+.stopBtn:hover {
+  background-color: #d7372e; /* Slightly darker red */
+  transform: scale(1.03);    /* Slight grow */
+}
+    
+  
+  
+  .startBtn {
+    background-color: #4CAF50;
+    color: white;
+    /* background-color:#317389;
+    /* color: #317389; */
+    /*border: 1.5px solid #fff; */
+    
+  }
+  
+  .stopBtn {
+    background-color:#317389;
+    /* color: #317389; */
+    border: 1.5px solid #fff;
+    
+  }
