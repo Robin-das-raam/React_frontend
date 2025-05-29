@@ -1,5 +1,6 @@
 // src/pages/welcome_p.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './welcome_p.css';
 
 // ✅ Use import for assets
@@ -8,9 +9,13 @@ import DoerLogo from '../assets/doer-logo.svg';
 import TryNowIcon from '../assets/arrow-icon.svg';
 
 const Welcome = () => {
-    const onFrameContainerClick = () => {
-        alert ("Try Now Clicked")
-    }
+    const navigate = useNavigate();
+
+    const handleTryNowClick = () => {
+        navigate('/method');
+    };
+
+    
     return (
         <div className="welcomePage">
             <img className="backgroundImage" alt="Background" src={BackgroundImage} />
@@ -31,7 +36,7 @@ const Welcome = () => {
                         </div>
 
                     </div>
-                    <div className="tryNowParent" onClick={onFrameContainerClick}>
+                    <div className="tryNowParent" onClick={handleTryNowClick}>
                         <div className="tryNow">Try Now</div>
                         <img className="TryNowIcon" alt="Try Now" src={TryNowIcon} />
                     </div>

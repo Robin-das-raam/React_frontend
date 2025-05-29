@@ -1,4 +1,5 @@
 import {functionComponent, useCallback} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './inference_method.css';
 import CctviconImage from '../assets/cctv_icon.png';
 import WebcamIconImage from '../assets/webcam_icon.png';
@@ -6,22 +7,26 @@ import UploadIconImage from '../assets/upload_icon.png';
 import GobackIconImage from '../assets/go_backicon.svg'
 
 const ChooseYourInferenceMethod = () => {
-    const onGobackIconClick = useCallback(() => {
-        // pass
-    }, []);
+    const navigate = useNavigate();
 
+    //  🔙 Go back to the previous page
+    const onGobackIconClick = useCallback(() => {
+        navigate(-1);
+    }, [navigate]);
+
+    // 🔁 Navigate based on the method clicked
     const onCardClick = useCallback((method) => {
-        console.log(`Card clicked: ${method}`);
-        // Navigation logic will go here later, e.g.:
-        // navigate(`/inference/${method}`);
-    }, []);
+        if (method === 'live-cctv') navigate ('/live-cctv');
+        else if (method === 'webcam') navigate ('/webcam');
+        else if (method === 'upload') navigate ('/upload')
+    }, [navigate]);
 
     return (
         <div className = "chooseYourInferenceMethod">
             <h1 className="heading">Choose Your Inference Method</h1>
             <div className = "cardContainer">
                 {/* Live CCTV */}
-                <div className="inferenceCard">
+                <div className="inferenceCard" onClick={()=> onCardClick('live-cctv')}>
                     <div className="cardIconWrapper">
                         <img className="cardIcon" alt ="Live CCTV" src = {CctviconImage} />
                         <div className="text">
@@ -31,7 +36,7 @@ const ChooseYourInferenceMethod = () => {
                     <div className="text1">
                         <div className="cardDescription">
                             <p>Connect to a live CCTV stream for continuous action analysis.</p>
-                            <p>Perfact for security and remote surveillance systems.</p>
+                            <p>Perfect for security and remote surveillance systems.</p>
                         </div>
 
                     </div>
@@ -39,7 +44,7 @@ const ChooseYourInferenceMethod = () => {
                 </div>
 
                 {/* Webcam */}
-                <div className="inferenceCard">
+                <div className="inferenceCard" onClick={() => onCardClick('webcam')}>
                     <div className="cardIconWrapper">
                         <img className="cardIcon" alt="Webcam" src = {WebcamIconImage} />
                         <div className="text">
@@ -56,7 +61,7 @@ const ChooseYourInferenceMethod = () => {
 
 
                 {/* Upload Video */}
-                <div className="inferenceCard">
+                <div className="inferenceCard" onClick={() => onCardClick('upload')}>
                     <div className="cardIconWrapper">
                         <img className="cardIcon" alt="Upload Video" src = {UploadIconImage} />
                         <div className="text">
@@ -71,7 +76,7 @@ const ChooseYourInferenceMethod = () => {
                     </div>
                 </div>
             </div>
-            <img className="goBackIcon" alt="" src={GobackIconImage} onClick={onGobackIconClick} />
+            <img className="goBackIcon" alt="Go Back" src={GobackIconImage} onClick={onGobackIconClick} />
         </div>
     )
 };
