@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from './pages/upload_videos.jsx';
+import Welcome from './pages/inferenceResult.jsx';
 
 function App() {
   return (
