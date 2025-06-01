@@ -45,6 +45,7 @@ const DragAndDrop = ({ onDrop }) => {
                 src={GoBackIcon}
                 alt="Go Back"
                 className="go-back-icon"
+                
                 onClick={() => window.history.back()} // Or your go-back handler
             />
             {/* <img src={GoBackIcon} alt="Go Back" className="goBackIcon" onClick={onGoBackClick} /> */}

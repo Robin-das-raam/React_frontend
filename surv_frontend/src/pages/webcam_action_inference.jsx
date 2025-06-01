@@ -1,5 +1,6 @@
 
 import { FunctionComponent, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 // import './live_cctv_inference.css';
 import './webcam_action_inference.css';
 import GoBackIcon from '../assets/go_backicon.svg';
@@ -10,9 +11,10 @@ import ClockIcon from '../assets/fluent_clock-48-regular.svg';
 import LiveImage from '../assets/roadimage.jpg';
 
 const LiveCCTVActionInference = () => {
+    const navigate = useNavigate();
     const onGoBackClick = useCallback(() => {
-        //
-    }, []);
+        navigate(-1) // Go back to the previous page in history
+    }, [navigate]);
 
     return (
         <div className="liveCCTVWrapper">

@@ -26,20 +26,6 @@
     top: 70px; /* lowered a bit */
   }
   
-  .goBackIcon {
-    width: 30px;
-    cursor: pointer;
-    margin-left: 0px;     /* Align with infoOverlay left padding */
-    margin-top: 10px;      /* Align vertically with infoOverlay */
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.goBackIcon:hover {
-transform: scale(1.1) rotate(-5deg);
-opacity: 0.8;
-}
-  
   
   .headerSection h1 {
     font-size: 32px;

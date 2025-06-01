@@ -76,7 +76,7 @@ const ChooseYourInferenceMethod = () => {
                     </div>
                 </div>
             </div>
-            <img className="goBackIcon" alt="Go Back" src={GobackIconImage} onClick={onGobackIconClick} />
+            <img className="go-back-icon" alt="Go Back" src={GobackIconImage} onClick={onGobackIconClick} />
         </div>
     )
 };

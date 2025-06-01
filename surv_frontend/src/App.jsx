@@ -28,7 +28,7 @@ function App() {
         <Route path="/upload" element={<UploadVideos />} />
         <Route path="/result" element={<InferenceResult />} />
         <Route path="/live-cctv" element={<LiveCCTVInference />} />
-        <Route path="/webcam" elemnt={<WebcamInference />} />
+        <Route path="/webcam" element={<WebcamInference />} />
 
       </Routes>
     </Router>

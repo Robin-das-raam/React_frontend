@@ -64,3 +64,38 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+.goBackIcon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  color: white;
+  border: none;
+}
+
+.goBackIcon:hover {
+transform: scale(1.1) rotate(-5deg);
+opacity: 0.8;
+}
+
+
+.go-back-icon {
+  position: absolute;
+  top: 90px;
+  left: 160px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: white;
+  border: none;
+}
+
+.go-back-icon:hover {
+  transform: scale(1.2);
+}

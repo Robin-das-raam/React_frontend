@@ -82,18 +82,3 @@
     line-height: 150%;
   }
 
-  .goBackIcon {
-    position: absolute;
-    top: 120px;
-    left: 120px;
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.goBackIcon:hover {
-  transform: scale(1.1) rotate(-5deg);
-  opacity: 0.8;
-}
-  
