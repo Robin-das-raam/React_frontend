@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDropzone } from 'react-dropzone';
 import './upload_videos.css';
 import UploadIcon from '../assets/icon_img.png';
@@ -7,6 +8,9 @@ import GoBackIcon from '../assets/go_backicon.svg';
 
 const DragAndDrop = ({ onDrop }) => {
     const [uploadedFiles, setUploadedFiles] = useState([]);
+    const navigate = useNavigate(); // Hook for navigation
+
+    const [loading, setLoading] = useState(false);
 
     const handleDrop =(acceptedFiles) =>{
         const filesWithProgress = acceptedFiles.map((file) => ({
@@ -26,6 +30,12 @@ const DragAndDrop = ({ onDrop }) => {
                         currentFile.progress += 5;
                     } else {
                         clearInterval(interval);
+                        // checkif all files are now 100%
+                        const allComplete = updatedFiles.every(f =>f.progress === 100);
+                        if (allComplete) {
+                            setLoading(true);
+                            setTimeout(() => navigate('/result'), 1000); // Auto Navigate
+                        }
                     }
                     return [...updatedFiles];
                 });
@@ -76,7 +86,16 @@ const DragAndDrop = ({ onDrop }) => {
                     ))}
                 </div>
             )}
+
+            {/* Add Spinner */ }
             
+            {loading && (
+                <div className="loading-spinner">
+                    <div className="spinner"></div>
+                    <p> Preparing result ...</p>
+                </div>
+            )}
+             
 
         </div>
         
